@@ -1,4 +1,4 @@
-import { CarCard, CustomFilter, Hero, SearchBar } from '@/components'
+import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from '@/components'
 import { fuels, yearsOfProduction } from '@/constants';
 import { fetchCars } from '@/utils'
 
@@ -37,6 +37,7 @@ const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
                 <CarCard car={car}/>
               ))}
             </div>
+            <ShowMore pageNumber={(searchParams.limit || 10) / 10} isNext={(searchParams.limit || 10) > allCars.length}/>
           </section>
         ): (
           <div className='home__error-container'>
@@ -44,6 +45,7 @@ const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
             <p>{allCars?.message}</p>
           </div>
         )}
+
       </div>
     </main>
   )
