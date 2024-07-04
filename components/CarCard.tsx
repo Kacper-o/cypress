@@ -10,9 +10,10 @@ import CarDetails from "./CarDetails"
 
 interface CarCardProps {
     car: CarProps
+    key: number;
 }
 
-const CarCard = ({ car } : CarCardProps) => {
+const CarCard = ({ car } : CarCardProps, key: number) => {
     const { city_mpg, year, make, model, transmission, drive } = car
     const [isOpen, setIsOpen] = useState(false)
     const carRent = calculateCarRent(city_mpg, year)

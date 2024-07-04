@@ -3,7 +3,7 @@ import { fuels, yearsOfProduction } from '@/constants';
 import { HomeProps } from '@/types';
 import { fetchCars } from '@/utils'
 
-import Image from 'next/image'
+
 
 export default async function Home({ searchParams }: HomeProps ) {
 const allCars = await fetchCars({
@@ -14,7 +14,7 @@ const allCars = await fetchCars({
   model: searchParams.model || ""
 })
 
-console.log("allcars:", allCars)
+
 
 
 const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
@@ -37,8 +37,8 @@ const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
         {!isDataEmpty ? (
           <section>
             <div className='home__cars-wrapper'>
-              {allCars.map((car) => (
-                <CarCard car={car}/>
+              {allCars.map((car, index) => (
+                <CarCard car={car} key={index} />
               ))}
             </div>
             <ShowMore pageNumber={(searchParams.limit || 10) / 10} isNext={(searchParams.limit || 10) > allCars.length}/>
