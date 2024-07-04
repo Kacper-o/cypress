@@ -15,11 +15,14 @@ const Hero = () => {
   return (
     <div className='hero'>
         <div className="flex-1 pt-36 padding-x">
-            <h1 className="hero__title">
-               Portfolio website of front-end developer
+        <h1 className="hero__title">
+               Car showcase demo
             </h1>
-            <p className="hero__subtitle">
-               Fast, modern and fully customized websites for Your needs.
+            <p className="hero__subtitle dark:text-gray-400">
+               Search, watch and read about your favorite cars.
+            </p>
+            <p className="hero__subsubtitle dark:text-gray-400">
+               Sorry for missing pictures, but api key expired.
             </p>
             <CustomButton 
                 title="Read more"
