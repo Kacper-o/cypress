@@ -23,7 +23,7 @@ const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
     <main className="overflow-hidden">
       <Hero/>
       <div className='mt-12 padding-x padding-y max-width' id="discover">
-        <div className='home__text-container'>
+      {/*   <div className='home__text-container'>
           <h1 data-testid="cypress-title" className='text-4xl font-extrabold dark:text-white'>Car catalogue</h1>
           <p className='dark:text-gray-400'>The cars you might like</p>
         </div>
@@ -48,7 +48,7 @@ const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
             <h2 className='text-black text-xl font-bold'>Oops, no results</h2>
             <p>{allCars?.message}</p>
           </div>
-        )}
+        )} */}
 
       </div>
     </main>
